@@ -414,3 +414,22 @@ button:disabled {
   padding: 12px 36px;
   font-size: 17px;
 }
+
+/* ---- 幅の狭い画面 ---- */
+
+@media (max-width: 760px) {
+  /* メモ欄がタイマーを覆わないよう、タイマーの下に全幅で置く */
+  #side {
+    top: 104px;
+    left: 8px;
+    right: 8px;
+    width: auto;
+    max-height: 38vh;
+  }
+
+  #help {
+    max-width: 96vw;
+    white-space: normal;
+    text-align: center;
+  }
+}
