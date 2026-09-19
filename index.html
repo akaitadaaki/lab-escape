@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAB ESCAPE - 閉鎖された研究所</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <div id="hud" hidden>
+      <div id="timer">10:00</div>
+      <div id="progress"></div>
+      <div id="seed"></div>
+      <div id="hover-label" hidden></div>
+      <div id="toast" hidden></div>
+      <div id="help">ドラッグ: 見回す ／ WASD・矢印: 移動 ／ クリック: 調べる・話す ／ M: メモ</div>
+      <aside id="side">
+        <h2>メモ <button id="side-toggle" type="button" title="メモを開閉 (M)">－</button></h2>
+        <div id="side-body">
+          <ul id="memo-list"></ul>
+          <h3>持ち物</h3>
+          <ul id="inventory-list"></ul>
+        </div>
+      </aside>
+    </div>
+
+    <div id="modal" hidden>
+      <div id="modal-box" role="dialog" aria-modal="true">
+        <h2 id="modal-title"></h2>
+        <div id="modal-body"></div>
+        <div id="modal-footer"><button id="modal-close" type="button">閉じる (Esc)</button></div>
+      </div>
+    </div>
+
+    <div id="title-screen" class="screen">
+      <div class="screen-box">
+        <h1>LAB ESCAPE</h1>
+        <p class="subtitle">閉鎖された研究所</p>
+        <p>
+          非常ロックが作動し、あなたは研究室に閉じ込められた。<br />
+          部屋を調べ、人に話を聞き、3枚の数字札を集めて出口のコードを解け。<br />
+          <strong>制限時間は10分。</strong>
+        </p>
+        <p class="keys">ドラッグ: 見回す ／ WASD・矢印キー: 移動 ／ クリック: 調べる・話す</p>
+        <button id="start-button" type="button">ゲーム開始</button>
+      </div>
+    </div>
+
+    <div id="end-screen" class="screen" hidden>
+      <div class="screen-box">
+        <h1 id="end-title"></h1>
+        <p id="end-text"></p>
+        <button id="retry-button" type="button">別の謎でもう一度</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
